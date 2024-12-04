@@ -1,4 +1,5 @@
 const path = require("path");
+const webpack = require("webpack");
 
 module.exports = {
   entry: "./src/index.js",
@@ -11,9 +12,8 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader", "postcss-loader"], // Ajout de postcss-loader
+        use: ["style-loader", "css-loader", "postcss-loader"],
       },
-      // règle pour les fichiers image
       {
         test: /\.(jpg|jpeg|png|gif|svg)$/i,
         use: [
@@ -21,7 +21,7 @@ module.exports = {
             loader: "file-loader",
             options: {
               name: "[name].[hash].[ext]",
-              outputPath: "images/", // définit le dossier de sortie pour les images
+              outputPath: "images/",
             },
           },
         ],
@@ -40,4 +40,9 @@ module.exports = {
       directory: path.join(__dirname, "dist"),
     },
   },
+  plugins: [
+    new webpack.DefinePlugin({
+      "process.env.REACT_APP_BASE_URL": JSON.stringify("http://localhost:3000"),
+    }),
+  ],
 };
