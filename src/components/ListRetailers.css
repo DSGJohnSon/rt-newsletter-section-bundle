@@ -1,0 +1,99 @@
+.list-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 75px;
+  padding-top: 75px;
+  font-family: "Axiforma", sans-serif;
+}
+
+.list-element {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.list-title {
+  background-color: #b1744f;
+  color: white;
+  padding: 16px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.list-content {
+  padding: 16px;
+}
+
+.city-container {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.city-name {
+  background-color: #ddd;
+  padding: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.city-name.selected {
+  background-color: #b1744f;
+  color: white;
+}
+
+.retailer-details {
+  padding: 16px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-top: 8px;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.5s ease;
+}
+
+.city-container .selected + .retailer-details {
+  max-height: 500px; /* Adjust based on content */
+  opacity: 1;
+  padding: 16px;
+}
+
+.retailer-logo img {
+  max-width: 100px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.retailer-infos {
+  font-size: 0.9rem;
+}
+
+.retailer-name {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.retailer-adress {
+  margin-bottom: 8px;
+}
+
+.retailer-contact a {
+  display: block;
+  color: #b1744f;
+  text-decoration: none;
+  margin-bottom: 4px;
+}
+
+.retailer-contact a:hover {
+  text-decoration: underline;
+}
+
+.city-offset {
+  position: absolute;
+  top: 50px; /* Adjust the offset as needed */
+  height: 1px;
+  background: transparent;
+}
