@@ -2,14 +2,8 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import MapRetailers from "./components/MapRetailers";
 import ListRetailers from "./components/ListRetailers";
-import { useEffect } from "react";
-import iframeResizer from "iframe-resizer";
 
 const App = () => {
-  useEffect(() => {
-    iframeResizer({}, "#react-iframe");
-  }, []);
-
   const retailers = [
     {
       slug: "dubai",
