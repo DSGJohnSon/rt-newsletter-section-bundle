@@ -83,6 +83,17 @@ const App = () => {
     },
   ];
 
+  useEffect(() => {
+    const setHeight = () => {
+      const height = document.documentElement.scrollHeight;
+      window.parent.postMessage({ type: "setHeight", height }, "*");
+    };
+
+    setHeight();
+    window.addEventListener("resize", setHeight);
+    return () => window.removeEventListener("resize", setHeight);
+  }, []);
+
   const [selectedCity, setSelectedCity] = React.useState(retailers[0].slug);
 
   const handleCitySelect = (city) => {
