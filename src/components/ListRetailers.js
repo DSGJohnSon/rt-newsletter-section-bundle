@@ -51,7 +51,7 @@ export default function ListRetailers({
                     <div key={index} className="retailer-info">
                       <div className="retailer-logo">
                         <img
-                          src={retailer.logo}
+                          src={`${process.env.REACT_APP_BASE_URL}${retailer.logo}`}
                           alt={retailer.name}
                           width={retailer.logoWidth}
                           height={retailer.logoHeight}

@@ -7,6 +7,8 @@ export default function MapRetailers({
   setSelectedCity,
   handleCitySelectAndScroll,
 }) {
+  const imageWorldMapPath = `${process.env.REACT_APP_BASE_URL}/images/world-map.svg`;
+
   // Function to detect language from URL
   const detectLanguage = () => {
     const path = window.location.pathname;
@@ -38,7 +40,7 @@ export default function MapRetailers({
 
   return (
     <div className="map-container" onClick={() => setSelectedCity(null)}>
-      <img src="./images/world-map.svg" alt="World Map" className="map-image" />
+      <img src={imageWorldMapPath} alt="World Map" className="map-image" />
 
       {uniqueRetailers.map((retailer, index) => (
         <div

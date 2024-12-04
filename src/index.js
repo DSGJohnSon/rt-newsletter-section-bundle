@@ -14,7 +14,7 @@ const App = () => {
       yRatio: 0.5,
       website: "https://perpetuel.com/",
       mail: "info@perpetuel.com",
-      logo: "./images/perpetuel.png",
+      logo: "/images/perpetuel.png",
     },
     {
       slug: "hongkong",
@@ -25,7 +25,7 @@ const App = () => {
       yRatio: 0.5151,
       website: "https://www.thelavishattic.com/",
       phone: "+85225290226",
-      logo: "./images/lavish_atic.png",
+      logo: "/images/lavish_atic.png",
     },
     {
       slug: "london",
@@ -36,7 +36,7 @@ const App = () => {
       yRatio: 0.3216,
       website: "https://swissgallery.co.uk/",
       phone: "+442073551000",
-      logo: "./images/swiss_gallery.png",
+      logo: "/images/swiss_gallery.png",
     },
     {
       slug: "newyork",
@@ -48,7 +48,7 @@ const App = () => {
       website: "https://www.cellinijewelers.com/",
       phone: "+12128880505",
       mail: "contact@cellinijewelers.com",
-      logo: "./images/cellini.png",
+      logo: "/images/cellini.png",
     },
     {
       slug: "denver",
@@ -59,7 +59,7 @@ const App = () => {
       yRatio: 0.41,
       website: "https://www.osterjewelers.com",
       phone: "+1 303-572-1111",
-      logo: "./images/oster.png",
+      logo: "/images/oster.png",
     },
     {
       slug: "taipei",
@@ -69,7 +69,7 @@ const App = () => {
       xRatio: 0.812,
       yRatio: 0.5,
       phone: "+886 2 2700 8927 ",
-      logo: "./images/maison-swiss-prestige.png",
+      logo: "/images/maison-swiss-prestige.png",
     },
     {
       slug: "london",
@@ -79,7 +79,7 @@ const App = () => {
       xRatio: 0.1,
       yRatio: 0.1,
       phone: "+886 2 2700 8927 ",
-      logo: "./images/maison-swiss-prestige.png",
+      logo: "/images/maison-swiss-prestige.png",
     },
   ];
 
