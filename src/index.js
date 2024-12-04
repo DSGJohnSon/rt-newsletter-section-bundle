@@ -2,8 +2,14 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import MapRetailers from "./components/MapRetailers";
 import ListRetailers from "./components/ListRetailers";
+import { useEffect } from "react";
+import iframeResizer from "iframe-resizer";
 
 const App = () => {
+  useEffect(() => {
+    iframeResizer({}, "#react-iframe");
+  }, []);
+
   const retailers = [
     {
       slug: "dubai",
@@ -82,17 +88,6 @@ const App = () => {
       logo: "./images/maison-swiss-prestige.png",
     },
   ];
-
-  useEffect(() => {
-    const setHeight = () => {
-      const height = document.documentElement.scrollHeight;
-      window.parent.postMessage({ type: "setHeight", height }, "*");
-    };
-
-    setHeight();
-    window.addEventListener("resize", setHeight);
-    return () => window.removeEventListener("resize", setHeight);
-  }, []);
 
   const [selectedCity, setSelectedCity] = React.useState(retailers[0].slug);
 
