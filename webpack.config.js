@@ -1,5 +1,9 @@
 const path = require("path");
 const webpack = require("webpack");
+const dotenv = require("dotenv");
+
+// Charger les variables d'environnement depuis le fichier .env
+dotenv.config();
 
 module.exports = {
   entry: "./src/index.js",
@@ -42,7 +46,9 @@ module.exports = {
   },
   plugins: [
     new webpack.DefinePlugin({
-      "process.env.REACT_APP_BASE_URL": JSON.stringify("http://localhost:3000"),
+      "process.env.REACT_APP_BASE_URL": JSON.stringify(
+        process.env.REACT_APP_BASE_URL
+      ),
     }),
   ],
 };
