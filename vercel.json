@@ -11,7 +11,7 @@
       "headers": [
         {
           "key": "Access-Control-Allow-Origin",
-          "value": "*"
+          "value": "https://renaudtixierdraft.webflow.io"
         },
         {
           "key": "Access-Control-Allow-Methods",
