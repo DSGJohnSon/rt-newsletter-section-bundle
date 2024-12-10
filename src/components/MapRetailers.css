@@ -1,8 +1,38 @@
+@keyframes spin {
+  0% {
+    transform: rotate(0deg) translate(-50%, -50%);
+  }
+  100% {
+    transform: rotate(360deg) translate(-50%, -50%);
+  }
+}
+
 .map-container {
   position: relative;
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
+}
+
+.map-container.is-loading .map-image {
+  opacity: 0.5;
+}
+
+.map-container .loader-map {
+  color: antiquewhite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  transform-origin: top left;
+  opacity: 0;
+  transition: all;
+}
+
+.map-container.is-loading .loader-map {
+  animation: spin 1s linear infinite;
+  opacity: 1;
 }
 
 .map-image {
@@ -16,7 +46,6 @@
   height: 12px;
   background-color: #b1744f;
   border-radius: 50%;
-  transform: translate(-50%, -50%);
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
 }

@@ -40,9 +40,17 @@ module.exports = {
     filename: "bundle.js",
   },
   devServer: {
-    static: {
-      directory: path.join(__dirname, "dist"),
-    },
+    static: "./dist",
+    hot: true,
+    historyApiFallback: true,
+    proxy: [
+      {
+        context: ["/api"],
+        target: "https://rt-backoffice.vercel.app",
+        changeOrigin: true,
+        pathRewrite: { "^/api": "/api" },
+      },
+    ],
   },
   plugins: [
     new webpack.DefinePlugin({

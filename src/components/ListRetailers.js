@@ -17,10 +17,10 @@ export default function ListRetailers({
   };
 
   const groupedRetailers = retailers.reduce((acc, retailer) => {
-    if (!acc[retailer.slug]) {
-      acc[retailer.slug] = [];
+    if (!acc[retailer.city.city_slug]) {
+      acc[retailer.city.city_slug] = [];
     }
-    acc[retailer.slug].push(retailer);
+    acc[retailer.city.city_slug].push(retailer);
     return acc;
   }, {});
 
@@ -43,19 +43,21 @@ export default function ListRetailers({
               <div
                 className={`city-name ${openCity === slug ? "selected" : ""}`}
                 onClick={() => handleCityClick(slug)}>
-                {groupedRetailers[slug][0].city}
+                {groupedRetailers[slug][0].city.name_fr}
               </div>
               {openCity === slug && (
                 <div className="retailer-details">
                   {groupedRetailers[slug].map((retailer, index) => (
                     <div key={index} className="retailer-info">
                       <div className="retailer-logo">
-                        <img
-                          src={`${process.env.REACT_APP_BASE_URL}${retailer.logo}`}
-                          alt={retailer.name}
-                          width={retailer.logoWidth}
-                          height={retailer.logoHeight}
-                        />
+                        {retailer.logo_image && (
+                          <img
+                            src={`${process.env.REACT_APP_BASE_URL}${retailer.logo_image}`}
+                            alt={retailer.name}
+                            width="100"
+                            height="100"
+                          />
+                        )}
                       </div>
                       <div className="retailer-infos">
                         <div className="retailer-name">{retailer.name}</div>
@@ -74,9 +76,9 @@ export default function ListRetailers({
                               {retailer.website}
                             </a>
                           )}
-                          {retailer.mail && (
-                            <a href={`mailto:${retailer.mail}`}>
-                              {retailer.mail}
+                          {retailer.email && (
+                            <a href={`mailto:${retailer.email}`}>
+                              {retailer.email}
                             </a>
                           )}
                         </div>
