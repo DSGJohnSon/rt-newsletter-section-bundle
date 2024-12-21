@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Marcellus&display=swap");
+
+* {
+  font-family: "Axiforma", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.font-marcellus {
+  font-family: "Marcellus", serif;
+  font-weight: 400;
+  font-style: normal;
+}

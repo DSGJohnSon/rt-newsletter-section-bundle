@@ -1,0 +1,26 @@
+{
+  "fr": {
+    "title": "Restez informé(e) de nos dernières actualités.",
+    "accroche": "Entrez votre e-mail pour recevoir la newsletter de Renaud Tixier directement dans votre boîte de réception.",
+    "placeholder": "E-mail",
+    "button": "S'inscrire",
+    "success": "Merci pour votre inscription !",
+    "error": "Une erreur est survenue. Veuillez réessayer plus tard."
+  },
+  "jp": {
+    "title": "最新情報をお見逃しなく。",
+    "accroche": "メールアドレスを入力して、ルノー・ティシエのニュースレターを受信してください。",
+    "placeholder": "メールアドレス",
+    "button": "登録する",
+    "success": "登録いただきありがとうございます！",
+    "error": "An error occurred. Please try again later."
+  },
+  "en": {
+    "title": "Keep up with our latest news",
+    "accroche": "Enter your email to receive the Renaud Tixier newsletter in your inbox",
+    "placeholder": "e-mail",
+    "button": "Sign-up",
+    "success": "Thank you for signing up!",
+    "error": "An error occurred. Please try again later."
+  }
+}
